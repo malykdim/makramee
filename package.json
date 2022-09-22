@@ -1,0 +1,20 @@
+{
+  "name": "makramee",
+  "version": "1.0.0",
+  "description": "Node.js, HTML, CSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malykdim/makramee.git"
+  },
+  "keywords": [],
+  "author": "AK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malykdim/makramee/issues"
+  },
+  "homepage": "https://github.com/malykdim/makramee#readme"
+}
