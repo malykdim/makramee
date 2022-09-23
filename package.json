@@ -1,7 +1,7 @@
 {
   "name": "makramee",
   "version": "1.0.0",
-  "description": "Node.js, HTML, CSS",
+  "description": "MVC Application with Node.js, Express, Handlebars",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
