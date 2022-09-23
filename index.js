@@ -13,7 +13,7 @@ const html = `
     <h1>Makramee</h1>
 </body>
 </html>
-`
+`;
 
 const server = http.createServer((req, res) => {
     console.log(`Request received`);
