@@ -5,6 +5,7 @@ const hbs = require('express-handlebars').create({
 
 const homeController = require('./controllers/homeController');
 const catalogController = require('./controllers/catalogController');
+const createController = require('./controllers/createController');
 const defaultController = require('./controllers/defaultController');
 
 
@@ -18,7 +19,7 @@ app.use('/static', express.static('static'));
 
 app.use(homeController);
 app.use('/catalog', catalogController);
-// other controllers
+app.use('/create', createController);
 
 app.all('*', defaultController);
 
