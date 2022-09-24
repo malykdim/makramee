@@ -3,6 +3,7 @@ const hbs = require('express-handlebars').create({
     extname: '.hbs'
 });
 
+const defaultTitle = require('./middlewares/defaultTitle');
 const homeController = require('./controllers/homeController');
 const catalogController = require('./controllers/catalogController');
 const createController = require('./controllers/createController');
@@ -16,6 +17,8 @@ app.set('view engine', '.hbs');
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/static', express.static('static'));
+
+app.use(defaultTitle('Makramee'));
 
 app.use(homeController);
 app.use('/catalog', catalogController);
