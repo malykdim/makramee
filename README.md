@@ -1,2 +1,2 @@
 # makramee
-Node.js, HTML, CSS 
+MVC Application with Node.js, Express, Handlebars
