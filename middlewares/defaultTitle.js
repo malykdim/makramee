@@ -1,5 +1,4 @@
 module.exports = (defaultTitle) => (req, res, next) => {
-    console.log(res.locals);
     res.locals.title = defaultTitle;
     next();
 };

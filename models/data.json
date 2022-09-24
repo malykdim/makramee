@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "imgURL": "/static/clothing.jpg",
+        "price": "98",
+        "category": "Clothing",
+        "author": "Steff"
+    },
+    {
+        "id": "2",
+        "imgURL": "/static/flowerbeds.jpg",
+        "price": "114",
+        "category": "Hanging Flowerbeds",
+        "author": "Nelly"
+    },
+    {
+        "id": "3",
+        "imgURL": "/static/interior.jpg",
+        "price": "356",
+        "category": "interior",
+        "author": "SaraJ"
+    },
+    {
+        "id": "4",
+        "imgURL": "/static/bag.jpg",
+        "price": "39",
+        "category": "accessories",
+        "author": "Ronda"
+    },
+    {
+        "id": "5",
+        "imgURL": "/static/cushines.jpg",
+        "price": "68",
+        "category": "accessories",
+        "author": "Mellanie"
+    },
+    {
+        "id": "6",
+        "imgURL": "/static/jewelery.jpg",
+        "price": "23",
+        "category": "accessories",
+        "author": "Yana"
+    }
+]
