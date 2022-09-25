@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    
+    font-family: 'Kalam', cursive;
+    font-size: 16px;
+    color: rgb(132, 109, 82);
+    
+    background-color: #fff;    
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.section-title {
+    font-size: 4em;    
+}
+#catalog .list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .9rem;
+    padding: 0;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.list {
+    list-style: none;
+    gap: 2.1rem;
+}
+
+.nav-link .link {
+    font-size: 2.1em;
+    color: rgb(132, 109, 82);
+}
+.nav-link .brand {
+    display: inline-block;
+    width: 244px;
+    height: 244px;
+}
+.nav-link .brand img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* itemCard */
+.itemCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    background-color: rgb(255, 235, 205, .6);
+    border: 1px solid blanchedalmond;
+    border-radius: 5px;
+}
+.itemCard .item{
+    text-decoration: none;
+    font-size: 2.1em;
+}
+.img-box {
+    max-height: 420px;
+    height: 420px;
+    opacity: 1;
+}
+.img-box img{
+    border-radius: 5px 5px 0 0;        
+}
+.info-box {
+    flex-direction: column;
+    font-size: 0.5em;
+    color: rgb(132, 109, 82);
+}
+
+
+footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    
+    margin: 0 auto;
+    text-align: center;
+    padding: .5rem 0;
+    font-size: 1.6em;
+    border-top: 1px solid rgb(132, 109, 82);
+    background: rgb(65, 54, 40);
+    color: #fff;
+    opacity: .9;
+}

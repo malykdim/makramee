@@ -1,8 +1,13 @@
 const router = require('express').Router();
 
+const { getAll } = require('../services/dataService');
+
+
 router.get('/', (req, res) => {
+    const items = getAll();
     res.render('catalog', {
-        title: 'Makramee - Catalogue'
+        title: 'Makramee - Catalogue',
+        items
     });
 });
 
