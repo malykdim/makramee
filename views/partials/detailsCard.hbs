@@ -1,0 +1,30 @@
+{{#with item}}
+<li class="detailsCard">
+    <div class="img-box">
+        <img src={{imgURL}} alt={{name}}>
+    </div>
+    <div class="info-box">
+        <p class="info">
+            <strong>{{name}}</strong> - {{price}}&euro;
+            
+        </p>
+        <p class="info">Category: {{category}}</p>
+        <p class="info">Author: {{author}}</p>
+        <button class="delete" class="info">Buy it now</button>
+        <button class="edit" class="info">Whish list</button>
+        <p class="info">Browse more...</p>
+        <button class="filter" class="info">Filter by category</button>
+        <button class="filter" class="info">Filter by author</button>
+        
+        {{!-- {{#if user}}
+            <button class="edit" class="info">Edit</button>
+            <button class="delete" class="info">Delete</button>
+            <p class="info">Browse others...</p>
+            <button class="filter" class="info">Filter by category</button>
+            <button class="filter" class="info">Filter by author</button>
+        {{/if}} --}}
+        
+
+    </div>    
+</li>
+{{/with}}

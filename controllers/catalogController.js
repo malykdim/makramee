@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAll } = require('../services/dataService');
+const { getAll, getById } = require('../services/dataService');
 
 
 router.get('/', (req, res) => {
@@ -12,9 +12,20 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    res.render('details', {
-        title: 'Makramee - Details'
-    });
+    const itemId = req.params.id;
+    const item = getById(itemId);
+    if (item) {
+        res.render('details', {
+            title: 'Makramee - Details',
+            item
+        });        
+    } else {
+        res.render('404', {
+            title: 'Not found',
+            itemId
+        });        
+
+    }
 });
 
 module.exports = router;

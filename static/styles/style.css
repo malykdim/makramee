@@ -96,10 +96,109 @@ section {
 }
 .info-box {
     flex-direction: column;
-    font-size: 0.5em;
+    font-size: 0.7em;
     color: rgb(132, 109, 82);
 }
 
+/* detailsCard */
+.detailsCard {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    background-color: rgb(255, 235, 205, .6);
+    border: 1px solid blanchedalmond;
+    border-radius: 5px;
+
+}
+.detailsCard .img-box {
+    max-height: 720px;
+    height: 720px;
+    opacity: 1;
+}
+.detailsCard .img-box img{
+    border-radius: 5px 5px 0 0;        
+}
+.detailsCard .info-box {
+    flex-direction: column;
+    font-size: 2em;
+    color: rgb(132, 109, 82);
+    width: 50%;
+    
+}
+
+.filter {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid rgb(168, 18, 18);
+    border-radius: 5px;
+    background: rgb(65, 54, 40);
+    color: blanchedalmond;
+    font-family: inherit;
+    font-size: .7em;
+    opacity: .5;
+    width: 200px;
+    
+}
+.filter:hover {
+    font-size: .72em;
+    transition: all .15s;
+    box-shadow: 2px 2px 5px rgb(132, 109, 82);
+}
+
+.edit {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid rgb(168, 18, 18);
+    border-radius: 5px;
+    background: blanchedalmond;
+    color: rgb(168, 18, 18);
+    font-family: inherit;
+    font-size: .7em;
+    opacity: .5;
+    width: 200px;
+}
+.edit:hover {
+    font-size: .75em;
+    transition: all .15s;
+    box-shadow: 2px 2px 5px rgb(132, 109, 82);
+}
+
+.delete {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid rgb(65, 54, 40);
+    border-radius: 5px;
+    background: rgb(168, 18, 18);
+    color: blanchedalmond;
+    font-family: inherit;
+    font-size: .7em;
+    opacity: .5;
+    width: 200px;
+    
+}
+.delete:hover {
+    font-size: .75em;
+    transition: all .15s;
+    box-shadow: 2px 2px 5px rgb(132, 109, 82);
+}
+
+.error {
+    width: 300px;
+    margin: 0 auto 5rem;
+    padding: 2rem 3rem;
+    text-align: center;
+    font-size: 1.8em;
+    color: rgb(196, 65, 65);
+    border: 1px solid rgb(168, 18, 18);
+    border-radius: 5px;
+}
 
 footer {
     position: sticky;
