@@ -3,8 +3,8 @@ const fs = require('fs');
 const fileName = './models/data.json';
 const data = JSON.parse(fs.readFileSync(fileName));
 
-function getAll() {
-    return data;
+function getAll(search) {
+    return data.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
 }
 
 function getById(id) {
@@ -20,6 +20,15 @@ async function create(itemData) {
         category: itemData.category,
         author: itemData.author,
         description: itemData.description
+    };
+    
+    // if (Object.values(item).some(v => !v)) {
+    //     throw new Error('All fields are required!');
+    // }
+    
+    const missing = Object.entries(item).filter(([k, v]) => !v);
+    if (missing.length > 0) {
+        throw new Error(missing.map(m => `${m[0]} is required!`).join('\n'));
     }
     
     data.push(item);

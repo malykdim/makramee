@@ -35,7 +35,11 @@
             <textarea name="description" cols="30" rows="10"></textarea>
         </label>
         {{#if error}}
-        <p class="error">Item {{itemId}} does not exist</p>        
+        <div class="error">
+            {{#each error}}
+            <p>{{this}}</p>     
+            {{/each}}
+        </div>
         {{/if}}
         <button class="submit">
             Create

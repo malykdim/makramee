@@ -4,10 +4,12 @@ const { getAll, getById } = require('../services/dataService');
 
 
 router.get('/', (req, res) => {
-    const items = getAll();
+    const search = req.query.search || '';
+    const items = getAll(search);
     res.render('catalog', {
         title: 'Makramee - Catalogue',
-        items
+        items,
+        search
     });
 });
 
