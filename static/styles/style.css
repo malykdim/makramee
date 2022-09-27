@@ -42,7 +42,6 @@ section {
     align-items: center;
     gap: .9rem;
     padding: 0;
-
 }
 
 .flex {
@@ -87,8 +86,8 @@ section {
     font-size: 2.1em;
 }
 .img-box {
-    max-height: 420px;
-    height: 420px;
+    max-height: 370px;
+    height: 370px;
     opacity: 1;
 }
 .img-box img{
@@ -112,7 +111,6 @@ section {
     background-color: rgb(255, 235, 205, .6);
     border: 1px solid blanchedalmond;
     border-radius: 5px;
-
 }
 .detailsCard .img-box {
     max-height: 720px;
@@ -187,6 +185,58 @@ section {
     font-size: .75em;
     transition: all .15s;
     box-shadow: 2px 2px 5px rgb(132, 109, 82);
+}
+
+/* form */
+.form {
+    width: 25rem;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid rgb(50, 84, 10);
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px rgba(132, 109, 82, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.form .label {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.form .label input {
+    width: 70%;
+}
+.form select {
+    width: 72%;
+}
+.form .description textarea {
+    text-align: left;
+    display: block;
+    width: 71%;
+    resize: vertical;
+}
+.form .submit {
+    width: 90%;
+    font-size: 1.7em;
+    font-family: inherit;
+    background: rgba(50, 84, 10, .4);
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgb(50, 84, 10);
+    box-shadow: 1px 1px 7px rgba(132, 109, 82, .5);
+    padding: .7rem;
+    margin-top: 1.7rem;
+}
+.form .submit:hover {
+    padding: .8rem;
+    font-size: 1.75em;
+}
+.form .submit:active {
+    box-shadow: none;
+    font-size: 1.75em;
 }
 
 .error {

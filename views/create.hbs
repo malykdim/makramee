@@ -1,1 +1,44 @@
-<h1>Create - form</h1>
+<section class="section" id="create">
+    <h2 class="section-title">Create</h2>
+    
+    <form action="/create" method="post" id="create" class="form">
+        <label class="label">
+            <span class="span">imgURL</span>
+            <input type="text" name="imgURL">
+        </label>
+        <label class="label">
+            <span class="span">name</span>            
+            <input type="text" name="name">
+        </label>
+        <label class="label">
+            <span class="span">price</span>            
+            <input type="number" name="price">
+        </label>
+        <label class="label">
+            <span class="span">category</span>            
+            <select name="category" id="category">
+                <option value="">Please select category</option>
+                <option value="clothing">Clothing</option>
+                <option value="hanging">Hanging</option>
+                <option value="interior">Interior</option>
+                <option value="accessories">Accessories</option>
+                <option value="jewellery">Jewellery</option>
+                <option value="outdoors">Outdoors</option>
+            </select>
+        </label>
+        <label class="label">
+            <span class="span">author</span>            
+            <input type="text" name="author">
+        </label>
+        <label class="label description">
+            <span class="span">description</span>            
+            <textarea name="description" cols="30" rows="10"></textarea>
+        </label>
+        {{#if error}}
+        <p class="error">Item {{itemId}} does not exist</p>        
+        {{/if}}
+        <button class="submit">
+            Create
+        </button>
+    </form>
+</section>
