@@ -4,11 +4,17 @@ const { getAll, getById } = require('../services/dataService');
 
 
 router.get('/', (req, res) => {
+    // const priceFrom = Number(req.query.search) || 1;
+    // const priceTo = Number(req.query.search) || 1000;
+    // const author = req.query.search || '';
+    // const category = req.query.search || '';
     const search = req.query.search || '';
     const items = getAll(search);
+    // const items = getAll(search, priceFrom, priceTo, author, category);
     res.render('catalog', {
         title: 'Makramee - Catalogue',
         items,
+        // priceFrom, priceTo, author, category
         search
     });
 });

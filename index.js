@@ -27,4 +27,4 @@ app.use('/create', createController);
 app.all('*', defaultController);
 
 
-app.listen(3000, () => console.log('Makramee listening on port 3000'));
+app.listen(3000, () => console.log('Makramee listening at http://localhost:3000'));
