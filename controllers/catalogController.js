@@ -1,15 +1,15 @@
 const router = require('express').Router();
 
-const { getAll, getById } = require('../services/dataService');
+const { getAll, getById } = require('../services/itemService');
 
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     // const priceFrom = Number(req.query.search) || 1;
     // const priceTo = Number(req.query.search) || 1000;
     // const author = req.query.search || '';
     // const category = req.query.search || '';
     const search = req.query.search || '';
-    const items = getAll(search);
+    const items = await getAll(search);
     // const items = getAll(search, priceFrom, priceTo, author, category);
     res.render('catalog', {
         title: 'Makramee - Catalogue',
@@ -19,9 +19,9 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
     const itemId = req.params.id;
-    const item = getById(itemId);
+    const item = await getById(itemId);
     if (item) {
         res.render('details', {
             title: 'Makramee - Details',
