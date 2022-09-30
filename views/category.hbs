@@ -1,0 +1,38 @@
+<section class="section" id="createCategory">
+    <h2 class="section-title">Create Category</h2>
+    
+        <form action="/category/create" method="post" class="form">
+        <label class="label">
+            <span class="span">iconURL</span>
+            <input type="text" name="iconURL">
+        </label>
+        <label class="label">
+            <span class="span">label</span>            
+            <input type="text" name="label">
+        </label>
+        <label class="label">
+            <span class="span">category</span>            
+            <select name="category" id="category">
+                <option value="">Please select category</option>
+                <option value="clothing">Clothing</option>
+                <option value="hanging">Hanging</option>
+                <option value="interior">Interior</option>
+                <option value="accessories">Accessories</option>
+                <option value="jewellery">Jewellery</option>
+                <option value="outdoors">Outdoors</option>
+            </select>
+        </label>
+        {{#if error}}
+        <div class="error">
+            {{#each error}}
+            <p>{{this}}</p>     
+            {{/each}}
+        </div>
+        {{/if}}
+        <button class="submit">
+            Create Category
+        </button>
+    </form>
+
+    
+</section>
