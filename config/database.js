@@ -13,9 +13,7 @@ module.exports = async (app) => {
         
         console.log('Database connected');
         
-        const data = await Item.find({});
-        console.log(data);
-        
+        const data = await Item.find({});        
     } catch (err) {
         console.error('Error initializing database');
         console.error(err.message);

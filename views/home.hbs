@@ -1,1 +1,105 @@
-<h1>Home</h1>
+<section class="section" id="home">
+    <p class="welcome">An open fair and exhibition of makramee.</p>
+    <div class="grid">
+        <figure class="grid-item-1">
+            <img
+                src="/static/images/flowerbeds/flowerbeds.jpg"
+                alt="Gallery image 1"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-2">
+            <a href="/" class="link"><h2 class="section-title">Welcome</h2></a>
+        </figure>
+        <figure class="grid-item-7">
+            <p class="slogan">where Craft meets Art</p>
+        </figure>
+        <figure class="grid-item-3 blur">
+            <img
+                src="/static/images/hanging/wall-grid.jpg"
+                alt="Gallery image 3"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-4 blur">
+            <img
+                src="/static/images/outdoors/tent.jpg"
+                alt="Gallery image 4"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-5 blur">
+            <img
+                src="/static/images/clothing/clothing.jpg"
+                alt="Gallery image 5"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-6 blur">
+            <img
+                src="/static/images/jewellery/jewellery-10.jpg"
+                alt="Gallery image 6"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-8 blur">
+            <img
+                src="/static/images/interior/swing-2.jpg"
+                alt="Gallery image 8"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-9 blur">
+            <img
+                src="/static/images/interior/green-swing.jpg"
+                alt="Gallery image 9"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-10 blur">
+            <img
+                src="/static/images/jewellery/jewellery-6.jpg"
+                alt="Gallery image 10"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-11 blur">
+            <img
+                src="/static/images/hanging/hang-1.jpg"
+                alt="Gallery image 11"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-12 blur">
+            <img
+                src="/static/images/ethno/ethno-3.jpg"
+                alt="Gallery image 12"
+                class="grid-img"
+            />
+        </figure>
+        <figure class="grid-item-13 blur">
+            <img
+                src="/static/images/accessories/acc-1.jpg"
+                alt="Gallery image 13"
+                class="grid-img"
+            />
+        </figure>
+
+    </div>
+    
+    
+    
+    {{#if items}}
+        <ul class="list">
+            {{#each items}}
+                {{> itemCard}}
+            {{/each}}
+        </ul>
+        {{else}}
+              
+        <p class="welcome">Artists may expose and sell their work.</p>      
+        <p class="welcome">Visitors may enjoy and buy.</p>      
+        <p class="welcome">Feel free to become an artist!</p>      
+    {{/if}}
+
+</section>
