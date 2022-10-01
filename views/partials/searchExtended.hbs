@@ -1,0 +1,20 @@
+<form action="" method="get" id="search" class="form">   
+    <label class="label">
+        <span class="span">by name:</span>
+        <input type="text" name="search" class="input" value="{{search}}">
+    </label>
+    <label class="label">
+        <span class="span">by author:</span>
+        <input type="text" name="author" class="input" value="{{author}}">
+    </label>
+    <label class="label">
+        <span class="span">by category:</span>
+        <input type="text" name="category" class="input" value="{{category}}">
+    </label>
+    <label class="label flex">
+        <span class="span">by price: </span>
+        <input type="number" name="priceFrom" class="number" value="{{priceFrom}}" placeholder="from" style="width: 27%; padding: 0.2rem; font-family: inherit;">
+        <input type="number" name="priceTo" class="number" value="{{priceTo}}" placeholder="to" style="width: 27%; padding: 0.2rem; font-family: inherit;">
+    </label>
+    <button class="submit">search</button>
+</form>

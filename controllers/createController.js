@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const result = await create(req.body);
-        res.redirect('/catalog/' + result._id);
+        res.redirect('/catalog/' );
     } catch (err) {
         res.render('create', {
             title: 'Request Error',
