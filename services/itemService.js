@@ -17,7 +17,7 @@ async function create(itemData) {
         author: itemData.author,
         description: itemData.description
     };
-    
+    console.log(item);
     
     const missing = Object.entries(item).filter(([k, v]) => !v);
     if (missing.length > 0) {
