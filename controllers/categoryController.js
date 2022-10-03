@@ -13,7 +13,7 @@ categoryController.get('/create', (req, res) => {
 
 categoryController.post('/create', async (req, res) => {
     try {
-        await createCategory(req.body.label, req.body.iconURL);
+        await createCategory(req.body.label);
         res.redirect('/create');
     } catch (err) {
         // TODO render errors

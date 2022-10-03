@@ -4,12 +4,13 @@ async function getAllCategories() {
     return Category.find({});
 }
 
-async function createCategory(label, iconURL) {
+async function createCategory(label) {
     return Category.create({
-        label,
-        iconURL
+        label
     });
 }
+
+
 
 module.exports = {
     getAllCategories,

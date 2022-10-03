@@ -17,14 +17,15 @@ async function create(itemData) {
         author: itemData.author,
         description: itemData.description
     };
-    console.log(item);
     
     const missing = Object.entries(item).filter(([k, v]) => !v);
     if (missing.length > 0) {
         throw new Error(missing.map(m => `${m[0]} is required!`).join('\n'));
     }
-
+    
     const result = await Item.create(item);
+    console.log(result);
+    console.log(result[0].showCategories());
     
     return result;
 }
