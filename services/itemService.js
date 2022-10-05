@@ -4,6 +4,11 @@ function getAll() {
     return Item.find({}).lean();
 }
 
+function filterByAuthor(author) {
+    return Item.find({ author: author }).lean();
+}
+
+
 function getById(id) {
     return Item.findById(id).lean();
 }
