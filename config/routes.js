@@ -6,12 +6,14 @@ const createController = require('../controllers/createController');
 const profileController = require('../controllers/profileController');
 
 const defaultController = require('../controllers/defaultController');
+const authController = require('../controllers/authController');
 
 module.exports = (app) => {
     app.use('/', homeController);
     app.use('/catalog', catalogController);
     app.use('/search', searchController);
     
+    app.use('/auth', authController);
     app.use('/create', createController);
     app.use('/category', categoryController);
     
