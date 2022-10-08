@@ -1,5 +1,5 @@
 const { create } = require('../services/itemService');
-const { createCategory } = require('../services/categoryService');
+// const { createCategory } = require('../services/categoryService');
 
 const router = require('express').Router();
 
