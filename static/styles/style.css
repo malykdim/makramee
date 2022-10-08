@@ -19,8 +19,9 @@ body {
 	color: rgb(132, 109, 82);
 }
 
-h1 {
-    font-size: 5em;
+.user {
+    font-size: 1.2em;
+    font-weight: normal;
     text-align: center;
 }
 

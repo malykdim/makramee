@@ -5,6 +5,7 @@ const hbs = require('express-handlebars').create({
 const cookieParser = require('cookie-parser');
 const defaultTitle = require('../middlewares/defaultTitle');
 const auth = require('../middlewares/auth');
+const userNav = require('../middlewares/userNav');
 const jwtSecret = '2342342i34khjhghfkhgv3';
 
 module.exports = (app) => {
@@ -16,7 +17,7 @@ module.exports = (app) => {
     
     app.use(cookieParser());
     app.use(auth(jwtSecret));
+    app.use(userNav());
     
-    app.use(defaultTitle('Makramee'));
-    
+    app.use(defaultTitle('Makramee'));    
 };

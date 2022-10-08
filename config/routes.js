@@ -7,17 +7,17 @@ const profileController = require('../controllers/profileController');
 
 const defaultController = require('../controllers/defaultController');
 const authController = require('../controllers/authController');
+const { hasUser } = require('../middlewares/guards');
 
 module.exports = (app) => {
     app.use('/', homeController);
     app.use('/catalog', catalogController);
     app.use('/search', searchController);
-    
     app.use('/auth', authController);
-    app.use('/create', createController);
-    app.use('/category', categoryController);
     
-    app.use('/profile', profileController);
+    app.use('/create', hasUser(), createController);
+    app.use('/category', hasUser(), categoryController);    
+    app.use('/profile', hasUser(), profileController);
 
     app.all('*', defaultController);
 };

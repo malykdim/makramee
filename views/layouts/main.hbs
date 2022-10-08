@@ -19,13 +19,17 @@
                         <img src="/static/images/brand/logo.png" alt="Makramee - logo">
                     </a>
                 </li>
-                {{#if user}}
+                {{#if hasUser}}                
+                <li class="nav-link">
+                    <a href="/profile" class="link">
+                        <h1 class="user">{{username}}</h1>
+                    </a>
+                </li>
                 <li class="nav-link"><a href="/create" class="link">Create</a></li>
-                <li class="nav-link"><a href="/profile" class="link">Profile</a></li>
                 <li class="nav-link"><a href="/auth/logout" class="link">Logout</a></li>
                 {{else}}
-                <li class="nav-link"><a href="/auth/signin" class="link">Sign in</a></li>
-                <li class="nav-link"><a href="/auth/signup" class="link">Sign up</a></li>
+                <li class="nav-link"><a href="/auth/signin" class="link">Signin</a></li>
+                <li class="nav-link"><a href="/auth/signup" class="link">Signup</a></li>
                 {{/if}}
             </ul>
         </nav>
