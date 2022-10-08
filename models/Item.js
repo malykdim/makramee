@@ -4,13 +4,13 @@ const itemSchema = new Schema({
     imgURL: { type: String, required: true },
     name: { type: String, minLength: 3 },
     price: { type: Number, required: true, min: [5, 'Price cannot be less than 5'] },
-    author: { type: String, required: true },
+    author: { type: Types.ObjectId, ref: 'User', required: true },
     description: { type: String, required: false },
     category: 
         { 
             type: [Types.ObjectId], 
-            ref: 'Category',
-            default: []
+            default: [],
+            ref: 'Category'
         }
     ,
     materials: [

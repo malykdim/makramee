@@ -13,13 +13,13 @@ function getById(id) {
     return Item.findById(id).lean();
 }
 
-async function create(itemData) {
+async function create(itemData, authorId) {
     const item = {
         imgURL: itemData.imgURL,
         name: itemData.name,
         price: Number(itemData.price),
         category: itemData.category,
-        author: itemData.author,
+        author: authorId,
         description: itemData.description
     };
     
@@ -29,8 +29,8 @@ async function create(itemData) {
     }
     
     const result = await Item.create(item);
-    console.log(result);
-    console.log(result[0].showCategories());
+    // console.log(result);
+    // console.log(result[0].showCategories());
     
     return result;
 }

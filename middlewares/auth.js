@@ -6,7 +6,7 @@ module.exports = (jwtSecret) => (req, res, next) => {
         try {
             const data = jwt.verify(token, jwtSecret);
             req.user = data;
-        } catch (err) {
+        } catch (error) {
             res.clearCookie('jwt');
             return res.redirect('/login');
         }
