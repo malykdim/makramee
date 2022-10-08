@@ -16,7 +16,7 @@ authController.post('/signin', async (req, res) => {
     } catch (error) {
         res.render('signIn', {
             title: 'Sign in',
-            error: err.message.split('\n')
+            error: error.message.split('\n')
         });
     }
 });
