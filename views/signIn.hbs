@@ -1,0 +1,29 @@
+<section class="section">
+    <h2 class="section-title">Sign in</h2>
+    
+    <form action="/auth/signin" method="post" id="signin" class="form">
+        <label class="label">
+            <span class="span">username: </span>
+            <input type="text" name="username" class="input">
+        </label>
+        <label class="label">
+            <span class="span">password: </span>            
+            <input type="password" name="password" class="input">
+        </label>
+
+        {{#if error}}
+        <div class="error">
+            {{#each error}}
+            <p>{{this}}</p>     
+            {{/each}}
+        </div>
+        {{/if}}
+        
+        <button class="submit">
+            Sign in
+        </button>
+    </form>
+    
+    <h4>If you don't have an account: <a href="/auth/signuh4" class="link">Sign up</a></p>
+    
+</section>

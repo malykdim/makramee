@@ -1,0 +1,33 @@
+<section class="section">
+    <h2 class="section-title">Sign up</h2>        
+    
+    <form action="/auth/signup" method="post" id="signup" class="form">
+        <label class="label">
+            <span class="span">username: </span>
+            <input type="text" name="username" class="input">
+        </label>
+        <label class="label">
+            <span class="span">password: </span>            
+            <input type="password" name="password" class="input">
+        </label>
+        <label class="label">
+            <span class="span">repeat password: </span>            
+            <input type="password" name="repass" class="input">
+        </label>        
+
+        {{#if error}}
+        <div class="error">
+            {{#each error}}
+            <p>{{this}}</p>     
+            {{/each}}
+        </div>
+        {{/if}}
+        
+        <button class="submit">
+            Sign up
+        </button>
+    </form>
+    
+    <h4>If you already have an account: <a href="/auth/signin" class="link">Sign in</a></h4>
+    
+</section>

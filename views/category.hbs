@@ -4,17 +4,19 @@
         <form action="/category/create" method="post" class="form">
             <label class="label">
                 <span class="span">existing:</span>            
-                <select name="category" id="category">
-                    <option value="">Please select category</option>
-                    <option value="clothing">Clothing</option>
+                <select name="category" id="category" multiple>
+                    {{#each categories}}
+                    <option value="{{categories[i]}}">Please select category</option>
+                    {{!-- <option value="clothing">Clothing</option>
                     <option value="hanging">Hanging</option>
                     <option value="interior">Interior</option>
                     <option value="accessories">Accessories</option>
                     <option value="jewellery">Jewellery</option>
-                    <option value="outdoors">Outdoors</option>
+                    <option value="outdoors">Outdoors</option> --}}
+                    {{/each}}
                 </select>
             </label>
-            
+
             <p class="notification">If you don't find the desired category in the dropdown above, please feel free to create a new category to match your needs.</p>
             
             <label class="label">

@@ -1,4 +1,5 @@
 const { create } = require('../services/itemService');
+const { createCategory } = require('../services/categoryService');
 
 const router = require('express').Router();
 
@@ -9,7 +10,8 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    try {
+    try {        
+        console.log(req.body);
         const result = await create(req.body);
         console.log(result);
         res.redirect('/catalog/' + result._id);

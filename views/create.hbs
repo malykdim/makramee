@@ -29,6 +29,15 @@
                 <a href="/category/create">&plus;</a>
             </button>
         </label>
+        
+        <label class="label">
+            <p class="displayChoices">selected: 
+                {{#each category}}
+                    {{category}}
+                {{/each}}
+            </p>                        
+        </label>            
+
         <label class="label">
             <span class="span">author</span>            
             <input type="text" name="author" class="input">

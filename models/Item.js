@@ -4,10 +4,24 @@ const itemSchema = new Schema({
     imgURL: { type: String, required: true },
     name: { type: String, minLength: 3 },
     price: { type: Number, required: true, min: [5, 'Price cannot be less than 5'] },
-    category: [{ type: [Types.ObjectId], default: [], ref: 'Category'}],
     author: { type: String, required: true },
     description: { type: String, required: false },
-    materials: [{ type: String, enum: ['cotton', 'linen', 'hemp', 'jute', 'leather', 'yarn', 'gemstones', 'wood', 'other'] }]
+    category: 
+        { 
+            type: [Types.ObjectId], 
+            ref: 'Category',
+            default: []
+        }
+    ,
+    materials: [
+        { 
+            type: String, 
+            enum: {
+                values: ['cotton', 'linen', 'hemp', 'jute', 'leather', 'yarn', 'gemstones', 'wood', 'other'], 
+                message: props => `${Object.keys(props)} is not supported`
+            } 
+        }
+    ]
 });
 
 itemSchema.path('description')

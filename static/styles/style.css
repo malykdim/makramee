@@ -86,6 +86,11 @@ section {
 .section-title {
     font-size: 3em;    
 }
+.link {
+    font-size: 1.3em;
+    color: rgb(132, 109, 82);
+    cursor: pointer;
+}
 
 /* home */
 section#home {
@@ -141,10 +146,10 @@ section#catalog {
 .form .label {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
 }
 .form .label input {
-    width: 70%;
+    width: 65%;
 }
 .form .label > select#category-list {
     width: 65%;
@@ -171,7 +176,7 @@ section#catalog {
     resize: vertical;
 }
 .form .submit {
-    width: 90%;
+    width: 95%;
     font-size: 1.7em;
     font-family: inherit;
     background: rgba(50, 84, 10, .4);

@@ -4,6 +4,9 @@ const { getAll, getById } = require('../services/itemService');
 
 
 router.get('/', async (req, res) => {
+    const user = req.user;
+    console.log(user);
+    
     const search = req.query.search || '';
     const items = await getAll(search);
     res.render('catalog', {
