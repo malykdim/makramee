@@ -6,13 +6,14 @@ const itemSchema = new Schema({
     price: { type: Number, required: true, min: [5, 'Price cannot be less than 5'] },
     author: { type: Types.ObjectId, ref: 'User', required: true },
     description: { type: String, required: false },
-    category: 
-        { 
-            type: [Types.ObjectId], 
-            default: [],
-            ref: 'Category'
-        }
-    ,
+    category: { type: String, required: false },
+    // category: 
+    //     { 
+    //         type: [Types.ObjectId], 
+    //         default: [],
+    //         ref: 'Category'
+    //     }
+    // ,
     materials: [
         { 
             type: String, 
@@ -30,7 +31,12 @@ itemSchema.path('description')
     }, 'Description must be up to 150 characters long');
 
 itemSchema.methods.showCategories = function() {
+    console.log(Object.entries(this.category));
     return `${this.category} should be an array of strings`; 
+};
+itemSchema.methods.showAuthor = function() {
+    console.log(Object.entries(this.author));
+    return `${this.author} should be a reference id string`; 
 };
 // USE: After awaiting the data
 // console.log(data[0].showCategories()); // function

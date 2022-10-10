@@ -10,19 +10,20 @@
         </p>
         <p class="info">Category: {{category}}</p>
         <p class="info">Author: {{author}}</p>
-        <button class="delete" class="info">Buy it now</button>
-        <button class="edit" class="info">Whish list</button>
-        <p class="info">Browse more...</p>
-        <button class="filter" class="info">Filter by category</button>
-        <button class="filter" class="info">Filter by author</button>
         
-        {{!-- {{#if user}}
+        {{#if user}}
             <button class="edit" class="info">Edit</button>
             <button class="delete" class="info">Delete</button>
             <p class="info">Browse others...</p>
             <button class="filter" class="info">Filter by category</button>
             <button class="filter" class="info">Filter by author</button>
-        {{/if}} --}}        
+            {{else}}
+            <button class="delete" class="info">Buy it now</button>
+            <button class="edit" class="info">Whish list</button>
+            <p class="info">Browse more...</p>
+            <button class="filter" class="info">Filter by category</button>
+            <button class="filter" class="info">Filter by author</button>
+        {{/if}}       
 
     </div>    
 </li>
