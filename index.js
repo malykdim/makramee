@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const databaseConfig = require('./config/database');
 const expressConfig = require('./config/express');
@@ -10,7 +11,7 @@ async function start() {
     expressConfig(app);
     routesConfig(app);
     
-    app.listen(3000, () => console.log('Makramee listening at http://localhost:3000'));
+    app.listen(process.env.PORT, () => console.log(`Makramee listening at ${process.env.HOST}:${process.env.PORT}`));
 }
     
 start();

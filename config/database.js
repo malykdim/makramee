@@ -1,8 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const Item = require('../models/Item');
 
-const connectionString = 'mongodb://localhost:27017/makramee';
-
+const connectionString = process.env.DATABASE_CONNECTION_STRING || 'mongodb://localhost:27017/makramee';
 
 module.exports = async (app) => {
     try {
@@ -17,7 +17,6 @@ module.exports = async (app) => {
             console.error('Database error');
             console.error(error);
         })
-        const data = await Item.find({});        
     } catch (err) {
         console.error('Error initializing database');
         console.error(err.message);

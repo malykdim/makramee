@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const hbs = require('express-handlebars').create({
     extname: '.hbs'
@@ -6,7 +7,8 @@ const cookieParser = require('cookie-parser');
 const defaultTitle = require('../middlewares/defaultTitle');
 const auth = require('../middlewares/auth');
 const userNav = require('../middlewares/userNav');
-const jwtSecret = '2342342i34khjhghfkhgv3';
+
+const jwtSecret = process.env.TOKEN_SECRET;
 
 module.exports = (app) => {
     app.engine('.hbs', hbs.engine);
