@@ -4,21 +4,21 @@
     <form action="/auth/signup" method="post" id="signup" class="form">
         <label class="label">
             <span class="span">username: </span>
-            <input type="text" name="username" class="input">
+            <input type="text" name="username" {{#if fields.username}}class="field-error input"{{/if}} value="{{body.username}}">
         </label>
         <label class="label">
             <span class="span">password: </span>            
-            <input type="password" name="password" class="input">
+            <input type="password" name="password" {{#if fields.password}}class="field-error input"{{/if}}>
         </label>
         <label class="label">
             <span class="span">repeat password: </span>            
-            <input type="password" name="repass" class="input">
-        </label>        
+            <input type="password" name="repass" {{#if fields.repass}}class="input field-error "{{/if}}>
+        </label>    
 
         {{#if error}}
         <div class="error">
             {{#each error}}
-            <p>{{this}}</p>     
+            <p>{{msg}}</p>     
             {{/each}}
         </div>
         {{/if}}

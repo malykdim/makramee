@@ -20,11 +20,14 @@ authController.post(
             attachToken(req, res, result);
             res.redirect('/catalog');
         } catch (error) {
+            // const fields = Object.fromEntries(error.map(e => [e.param, e.param]));
+            
             res.render('signIn', {
                 title: 'Sign in',
                 body: {
                     username: req.body.username
                 },
+                // fields,
                 error: parseError(error)
             });
         }
@@ -66,13 +69,16 @@ authController.post(
             const result = await register(req.body.username, req.body.password);    
             attachToken(req, res, result);    
             res.redirect('/catalog');        
-        } catch (err) {
+        } catch (error) {
+            console.log(error);
+            const fields = Object.fromEntries(error.map(e => [e.param, e.param]));
             res.render('signUp', {
                 title: 'Sign up',
                 body: {
                     username: req.body.username
                 },
-                error: parseError(error)
+                fields,
+                error
             });
         }
     }
