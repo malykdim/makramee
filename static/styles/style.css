@@ -405,6 +405,14 @@ section#catalog {
     border-radius: 5px;
 }
 
+.field-error {
+    border-left: 3px solid rgb(168, 18, 18);
+    border-top: 1px solid rgb(132, 109, 82, .2);
+    border-bottom: 1px solid rgb(132, 109, 82, .2);
+    border-right: 1px solid rgb(132, 109, 82, .2);
+    border-radius: 3px;
+}
+
 footer {
     position: sticky;
     bottom: 0;

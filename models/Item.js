@@ -1,9 +1,19 @@
 const { Schema, model, Types, set } = require('mongoose');
 
 const itemSchema = new Schema({
-    imgURL: { type: String, required: true },
-    name: { type: String, minLength: 3 },
-    price: { type: Number, required: true, min: [5, 'Price cannot be less than 5'] },
+    imgURL: { 
+        type: String, 
+        validate: {
+            validator: (value) => URL_REGEX.test(value),
+            message: (props) => {
+                console.log(props);
+                return `${props.value} is not a valid image URL`;
+            }
+        },
+        required: true 
+    },
+    name: { type: String, minLength: [3, 'Name must be at least 3 charactesr long']},
+    price: { type: Number, required: true, min: [0.01, 'Price must be a positive number'] },
     author: { type: Types.ObjectId, ref: 'User', required: true },
     description: { type: String, required: false },
     category: { type: String, required: false },

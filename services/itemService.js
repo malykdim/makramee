@@ -29,7 +29,7 @@ async function create(itemData, authorId) {
     }
     
     const result = await Item.create(item);
-    console.log(Item.showAuthor());
+    // console.log(Item.showAuthor());
     // console.log(result[0].showCategories());
     
     return result;
