@@ -39,7 +39,23 @@ async function login(username, password) {
     };
 }
 
+function createSession({ _id, email, username}) {
+    const payload = {
+        _id,
+        email,
+        username
+    };
+    
+    return jwt.sign(payload, JWT_SECRET);
+}
+
+function verifyToken(token) {
+    return jwt.verify(token, JWT_SECRET);
+}
+
+
 module.exports = {
     register,
     login,
+    verifyToken
 }

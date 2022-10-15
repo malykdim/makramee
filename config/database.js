@@ -9,14 +9,9 @@ module.exports = async (app) => {
         await mongoose.connect(connectionString, {
             useUnifiedTopology: true,
             useNewUrlParser: true
-        });
-        
+        });        
         console.log('Database connected');
         
-        mongoose.connection.on('error', (error) => {
-            console.error('Database error');
-            console.error(error);
-        })
     } catch (err) {
         console.error('Error initializing database');
         console.error(err.message);
