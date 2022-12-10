@@ -1,7 +1,7 @@
 # makramee
 MVC Application with Node.js, Express, Handlebars
 
-## Screenshot
+## Screenshots
 
 ![home](https://user-images.githubusercontent.com/38568843/193426070-e4a9c188-c2b4-49b6-8242-e4dbf63c8653.jpg)
 
